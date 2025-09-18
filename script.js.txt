@@ -1,0 +1,60 @@
+async function loadData() {
+  const resp = await fetch('data/tracks.json');
+  const data = await resp.json();
+  buildSocials(data.socials);
+  buildMusic(data.tracks);
+  buildVideos(data.videos);
+  buildGallery(data.gallery);
+}
+
+function buildSocials(list){
+  const cont = document.getElementById('social-links');
+  list.forEach(s => {
+    const a = document.createElement('a');
+    a.href = s.url; a.target = '_blank'; a.textContent = s.name;
+    cont.appendChild(a);
+  })
+}
+
+function buildMusic(tracks){
+  const list = document.getElementById('player-list');
+  tracks.forEach(t=>{
+    const card = document.createElement('div'); card.className='card';
+    const img = document.createElement('img'); img.src=t.cover; card.appendChild(img);
+    const title = document.createElement('div'); title.textContent=t.title; title.style.fontWeight='600';
+    card.appendChild(title);
+    if(t.source === 'mp3'){
+      const audio = document.createElement('audio'); audio.controls=true;
+      audio.src = t.src; card.appendChild(audio);
+    } else if(t.source === 'soundcloud'){
+      const iframe = document.createElement('iframe');
+      iframe.src = t.src; iframe.width='100%'; iframe.height='166'; iframe.frameBorder='no';
+      card.appendChild(iframe);
+    }
+    list.appendChild(card);
+  })
+}
+
+function buildVideos(videos){
+  const list = document.getElementById('video-list');
+  videos.forEach(v=>{
+    const card = document.createElement('div'); card.className='card';
+    const iframe = document.createElement('iframe');
+    iframe.width='320'; iframe.height='180'; iframe.src = v.embed; iframe.allow='autoplay; encrypted-media';
+    card.appendChild(iframe);
+    const t = document.createElement('div'); t.textContent=v.title; t.style.marginTop='6px';
+    card.appendChild(t);
+    list.appendChild(card);
+  })
+}
+
+function buildGallery(images){
+  const grid = document.getElementById('gallery-grid');
+  images.forEach(img=>{
+    const c = document.createElement('div'); c.className='card';
+    const i = document.createElement('img'); i.src = img.src; c.appendChild(i);
+    grid.appendChild(c);
+  })
+}
+
+loadData();

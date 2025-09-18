@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Smalls AI — Pac-Control Nightmare</title>
+  <meta name="description" content="Smalls AI — digital twin of ThaRealSmalls. Music, visuals, drops."/>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <img id="cover" src="assets/cover.jpg" alt="Pac-Control Nightmare cover"/>
+      <div class="hero-text">
+        <h1 id="site-title">Smalls AI</h1>
+        <p id="site-tag">Pac-Control Nightmare — digital twin of ThaRealSmalls</p>
+        <div class="socials" id="social-links"></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-wrap">
+    <section id="music">
+      <h2>Music</h2>
+      <div id="player-list" class="grid"></div>
+    </section>
+
+    <section id="videos">
+      <h2>Videos</h2>
+      <div id="video-list" class="grid"></div>
+    </section>
+
+    <section id="gallery">
+      <h2>Gallery</h2>
+      <div id="gallery-grid" class="grid"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>Smalls AI — digital twin. All AI content disclosed.</small>
+  </footer>
+
+  <script src="data/tracks.json" type="application/json" id="data-tracks"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>
