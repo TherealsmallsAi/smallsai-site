@@ -1,0 +1,31 @@
+{
+  "socials": [
+    {
+      "name": "YouTube",
+      "url": "https://www.youtube.com/@mikepriceakasmalls"
+    },
+    {
+      "name": "ReverbNation",
+      "url": "https://www.reverbnation.com/mikepriceakasmalls"
+    }
+  ],
+  "tracks": [
+    {
+      "title": "Quickeye Hustle",
+      "cover": "assets/smallsai-cover1.jpg.jpg",
+      "source": "mp3",
+      "src": "assets/smallsai-quickeye-hustle.mp3.mp3"
+    }
+  ],
+  "videos": [],
+  "gallery": [
+    {
+      "src": "assets/smallsai-cover1.jpg.jpg",
+      "alt": "Smalls AI cover artwork"
+    },
+    {
+      "src": "assets/smallsai-logo.jpg.jpg",
+      "alt": "Smalls AI logo artwork"
+    }
+  ]
+}

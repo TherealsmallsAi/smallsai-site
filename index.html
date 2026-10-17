@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Smalls AI — Pac-Control Nightmare</title>
+  <title>Smalls AI — Quickeye Hustle</title>
   <meta name="description" content="Smalls AI — digital twin of ThaRealSmalls. Music, visuals, drops."/>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="hero">
     <div class="wrap">
-      <img id="cover" src="assets/cover.jpg" alt="Pac-Control Nightmare cover"/>
+      <img id="cover" src="assets/smallsai-cover1.jpg.jpg" alt="Quickeye Hustle cover" onerror="this.hidden=true" />
       <div class="hero-text">
         <h1 id="site-title">Smalls AI</h1>
-        <p id="site-tag">Pac-Control Nightmare — digital twin of ThaRealSmalls</p>
+        <p id="site-tag">Quickeye Hustle — digital twin of ThaRealSmalls</p>
         <div class="socials" id="social-links"></div>
       </div>
     </div>
@@ -22,25 +22,25 @@
   <main class="main-wrap">
     <section id="music">
       <h2>Music</h2>
-      <div id="player-list" class="grid"></div>
+      <div id="player-list" class="grid" aria-live="polite"></div>
     </section>
 
     <section id="videos">
       <h2>Videos</h2>
-      <div id="video-list" class="grid"></div>
+      <div id="video-list" class="grid" aria-live="polite"></div>
     </section>
 
     <section id="gallery">
       <h2>Gallery</h2>
-      <div id="gallery-grid" class="grid"></div>
+      <div id="gallery-grid" class="grid" aria-live="polite"></div>
     </section>
+    <p id="content-status" role="status" aria-live="polite"></p>
   </main>
 
   <footer class="footer">
     <small>Smalls AI — digital twin. All AI content disclosed.</small>
   </footer>
 
-  <script src="data/tracks.json" type="application/json" id="data-tracks"></script>
-  <script src="scripts.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
