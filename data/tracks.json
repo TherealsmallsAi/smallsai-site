@@ -1,0 +1,31 @@
+{
+  "socials": [
+    {
+      "name": "YouTube",
+      "url": "https://www.youtube.com/@mikepriceakasmalls"
+    },
+    {
+      "name": "ReverbNation",
+      "url": "https://www.reverbnation.com/mikepriceakasmalls"
+    }
+  ],
+  "tracks": [
+    {
+      "title": "Pac-Control Nightmare",
+      "cover": "assets/pac-cover.jpg",
+      "source": "mp3",
+      "src": "assets/pac-control-nightmare.mp3"
+    }
+  ],
+  "videos": [],
+  "gallery": [
+    {
+      "src": "assets/promo1.jpg",
+      "alt": "Smalls AI promotional image 1"
+    },
+    {
+      "src": "assets/promo2.jpg",
+      "alt": "Smalls AI promotional image 2"
+    }
+  ]
+}
