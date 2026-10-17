@@ -11,21 +11,21 @@
   ],
   "tracks": [
     {
-      "title": "Pac-Control Nightmare",
-      "cover": "assets/pac-cover.jpg",
+      "title": "Quickeye Hustle",
+      "cover": "assets/smallsai-cover1.jpg.jpg",
       "source": "mp3",
-      "src": "assets/pac-control-nightmare.mp3"
+      "src": "assets/smallsai-quickeye-hustle.mp3.mp3"
     }
   ],
   "videos": [],
   "gallery": [
     {
-      "src": "assets/promo1.jpg",
-      "alt": "Smalls AI promotional image 1"
+      "src": "assets/smallsai-cover1.jpg.jpg",
+      "alt": "Smalls AI cover artwork"
     },
     {
-      "src": "assets/promo2.jpg",
-      "alt": "Smalls AI promotional image 2"
+      "src": "assets/smallsai-logo.jpg.jpg",
+      "alt": "Smalls AI logo artwork"
     }
   ]
 }
