@@ -1,0 +1,28 @@
+name: Inspect bundled site archives
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  inspect-archives:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: List archive contents without extracting
+        run: |
+          python - <<'PY'
+          from pathlib import PurePosixPath
+          from zipfile import ZipFile
+          for filename in ("data.zip", "assests.zip", "assets.zip", "admin.zip"):
+              try:
+                  archive = ZipFile(filename)
+              except FileNotFoundError:
+                  continue
+              print(f"--- {filename} ---")
+              for name in archive.namelist():
+                  path = PurePosixPath(name)
+                  if path.is_absolute() or ".." in path.parts:
+                      raise SystemExit(f"Unsafe archive path: {name}")
+                  print(name)
+          PY
