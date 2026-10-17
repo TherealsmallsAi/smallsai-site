@@ -10,7 +10,7 @@
 <body>
   <header class="hero">
     <div class="wrap">
-      <img id="cover" src="assets/cover.jpg" alt="Pac-Control Nightmare cover"/>
+      <img id="cover" src="assets/cover.jpg" alt="Pac-Control Nightmare cover" onerror="this.hidden=true" />
       <div class="hero-text">
         <h1 id="site-title">Smalls AI</h1>
         <p id="site-tag">Pac-Control Nightmare — digital twin of ThaRealSmalls</p>
@@ -22,25 +22,25 @@
   <main class="main-wrap">
     <section id="music">
       <h2>Music</h2>
-      <div id="player-list" class="grid"></div>
+      <div id="player-list" class="grid" aria-live="polite"></div>
     </section>
 
     <section id="videos">
       <h2>Videos</h2>
-      <div id="video-list" class="grid"></div>
+      <div id="video-list" class="grid" aria-live="polite"></div>
     </section>
 
     <section id="gallery">
       <h2>Gallery</h2>
-      <div id="gallery-grid" class="grid"></div>
+      <div id="gallery-grid" class="grid" aria-live="polite"></div>
     </section>
+    <p id="content-status" role="status" aria-live="polite"></p>
   </main>
 
   <footer class="footer">
     <small>Smalls AI — digital twin. All AI content disclosed.</small>
   </footer>
 
-  <script src="data/tracks.json" type="application/json" id="data-tracks"></script>
-  <script src="scripts.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
